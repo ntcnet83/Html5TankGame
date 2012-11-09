@@ -122,7 +122,9 @@ namespace Html5TankGame.Contracts
                 Arena = Game.Arena,
                 Cooldown = _cooldown,
                 Position = new PointF((float)X, (float)Y),
-                VisibleTanks = new List<Tank>()
+                Tanks = Game.ActiveTanks,
+                TankAngle = this.Angle,
+                TurretAngle = this.TurretAngle,
             };
 
             var newShot = NewShotLocation();
